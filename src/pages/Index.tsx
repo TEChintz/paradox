@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -77,8 +76,8 @@ const Index = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="font-geist text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
           >
-            From finding the best deals to booking flights, let AI handle your daily
-            tasks while you focus on what matters most.
+            Meet Paradox, your AI companion that handles everything from finding the best deals 
+            to booking flights, while you focus on what matters most.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
