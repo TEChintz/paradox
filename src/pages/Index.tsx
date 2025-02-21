@@ -236,10 +236,43 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Copyright Footer */}
-      <footer className="py-8 px-4 border-t border-white/10">
+      {/* Footer with Company Info */}
+      <footer className="py-16 px-4 border-t border-white/10">
         <div className="container mx-auto">
-          <div className="text-center text-sm text-gray-400">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div className="space-y-4">
+              <h3 className="text-white text-lg font-medium">About Paradox</h3>
+              <p className="text-gray-400 text-sm">
+                Pioneering the future of AI assistance, making everyday tasks simpler and more efficient for everyone.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-white text-lg font-medium">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">About Us</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">Features</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">Pricing</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-white text-lg font-medium">Legal</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">Cookie Policy</a></li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-white text-lg font-medium">Contact</h3>
+              <ul className="space-y-2">
+                <li className="text-gray-400 text-sm">San Francisco, CA</li>
+                <li className="text-gray-400 text-sm">contact@paradox.ai</li>
+                <li className="text-gray-400 text-sm">+1 (555) 123-4567</li>
+              </ul>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-white/10 text-center text-sm text-gray-400">
             <p>&copy; {new Date().getFullYear()} Paradox AI. All rights reserved.</p>
           </div>
         </div>
