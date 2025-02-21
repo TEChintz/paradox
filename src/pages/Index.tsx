@@ -13,15 +13,35 @@ import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#0A0118] bg-gradient-to-b from-violet-950/20 to-black/90 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#8B5CF6_0%,_transparent_40%)] opacity-20" />
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-[#0A0118] bg-gradient-to-b from-violet-950/20 to-black/90 overflow-hidden"
+    >
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.2 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#8B5CF6_0%,_transparent_40%)]" 
+      />
       
       {/* Futuristic background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-violet-500/10 to-transparent rounded-full blur-3xl" />
+        <motion.div 
+          animate={{ 
+            y: [0, -20, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            duration: 20,
+            repeat: Infinity,
+            repeatType: "reverse"
+          }}
+          className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-violet-500/10 to-transparent rounded-full blur-3xl"
+        />
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
-        {/* Grid pattern */}
         <div className="absolute inset-0" style={{
           backgroundImage: `linear-gradient(to right, rgba(139, 92, 246, 0.1) 1px, transparent 1px),
                            linear-gradient(to bottom, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
@@ -33,26 +53,53 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-16 md:pt-20 pb-16 text-center lg:pt-32 relative">
         <div className="mx-auto max-w-3xl space-y-6 md:space-y-8">
-          <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20">
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20"
+          >
             Coming Soon
-          </span>
-          <h1 className="animate-fade-up text-3xl md:text-4xl lg:text-6xl font-normal tracking-tight text-gradient">
+          </motion.span>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-3xl md:text-4xl lg:text-6xl font-normal tracking-tight text-gradient"
+          >
             Your AI Assistant for
             <span className="text-primary italic"> Everyday Tasks</span>
-          </h1>
-          <p className="animate-fade-up font-geist text-base md:text-lg text-gray-400 max-w-2xl mx-auto [animation-delay:200ms]">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="font-geist text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
+          >
             From finding the best deals to booking flights, let AI handle your daily
             tasks while you focus on what matters most.
-          </p>
-          <div className="animate-fade-up space-y-4 md:space-y-0 md:space-x-4 [animation-delay:400ms]">
-            <Button size="lg" className="rounded-full bg-primary/90 hover:bg-primary">
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <Button 
+              size="lg" 
+              className="rounded-full bg-primary/90 hover:bg-primary transition-all duration-300 hover:scale-105"
+            >
               Join Waitlist
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full border-white/10 bg-white/5 hover:bg-white/10">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="rounded-full border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+            >
               Learn More
             </Button>
-          </div>
+          </motion.div>
         </div>
 
         {/* Feature Preview */}
@@ -95,7 +142,13 @@ const Index = () => {
 
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16 md:py-24 relative">
-        <div className="mx-auto max-w-3xl text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mx-auto max-w-3xl text-center"
+        >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
             Everything you need in <span className="italic">one place</span>
           </h2>
@@ -103,26 +156,40 @@ const Index = () => {
             Let our AI assistant handle your everyday tasks while you focus on what
             matters most.
           </p>
-        </div>
+        </motion.div>
 
         <div className="mt-12 md:mt-20 grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <Card
+            <motion.div
               key={feature.title}
-              className="animate-fade-up neo-blur p-6 transition-all duration-300 hover:bg-white/10 [animation-delay:600ms]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
             >
-              <div className="mb-4 inline-block rounded-lg bg-primary/10 p-3 text-primary border border-primary/20">
-                <feature.icon className="h-5 w-5 md:h-6 md:w-6" />
-              </div>
-              <h3 className="mb-2 text-lg md:text-xl font-normal text-white">{feature.title}</h3>
-              <p className="text-sm md:text-base text-gray-400 font-geist">{feature.description}</p>
-            </Card>
+              <Card className="neo-blur p-6 transition-all duration-300 hover:bg-white/10 shimmer-effect group">
+                <motion.div 
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  className="mb-4 inline-block rounded-lg bg-primary/10 p-3 text-primary border border-primary/20 group-hover:bg-primary/20"
+                >
+                  <feature.icon className="h-5 w-5 md:h-6 md:w-6" />
+                </motion.div>
+                <h3 className="mb-2 text-lg md:text-xl font-normal text-white">{feature.title}</h3>
+                <p className="text-sm md:text-base text-gray-400 font-geist">{feature.description}</p>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="relative overflow-hidden rounded-3xl bg-primary/20 px-6 py-16 md:py-24 shadow-xl sm:px-24 border border-primary/20">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10" />
@@ -146,8 +213,8 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </motion.section>
+    </motion.div>
   );
 };
 
