@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -13,27 +14,29 @@ import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-[#0A0118] bg-gradient-to-b from-violet-950/20 to-black/90 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#8B5CF6_0%,_transparent_40%)] opacity-20" />
+      
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-16 md:pt-20 pb-16 text-center lg:pt-32">
+      <section className="container mx-auto px-4 pt-16 md:pt-20 pb-16 text-center lg:pt-32 relative">
         <div className="mx-auto max-w-3xl space-y-6 md:space-y-8">
-          <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+          <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20">
             Coming Soon
           </span>
-          <h1 className="animate-fade-up text-3xl md:text-4xl lg:text-6xl font-normal tracking-tight text-gray-900">
+          <h1 className="animate-fade-up text-3xl md:text-4xl lg:text-6xl font-normal tracking-tight text-gradient">
             Your AI Assistant for
             <span className="text-primary italic"> Everyday Tasks</span>
           </h1>
-          <p className="animate-fade-up font-geist text-base md:text-lg text-gray-600 max-w-2xl mx-auto [animation-delay:200ms]">
+          <p className="animate-fade-up font-geist text-base md:text-lg text-gray-400 max-w-2xl mx-auto [animation-delay:200ms]">
             From finding the best deals to booking flights, let AI handle your daily
             tasks while you focus on what matters most.
           </p>
           <div className="animate-fade-up space-y-4 md:space-y-0 md:space-x-4 [animation-delay:400ms]">
-            <Button size="lg" className="rounded-full">
+            <Button size="lg" className="rounded-full bg-primary/90 hover:bg-primary">
               Join Waitlist
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full">
+            <Button variant="outline" size="lg" className="rounded-full border-white/10 bg-white/5 hover:bg-white/10">
               Learn More
             </Button>
           </div>
@@ -41,8 +44,8 @@ const Index = () => {
 
         {/* Feature Preview */}
         <div className="mx-auto mt-12 md:mt-20 max-w-5xl animate-fade-up px-4 [animation-delay:600ms]">
-          <Card className="overflow-hidden border-2 shadow-lg">
-            <div className="bg-[#F1F0FB] p-4 md:p-6">
+          <Card className="overflow-hidden border-0 shadow-2xl neo-blur">
+            <div className="p-4 md:p-6">
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary/40" />
@@ -51,11 +54,11 @@ const Index = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="rounded-lg bg-white/80 p-2.5 shadow-sm">
-                      <MessageCircle className="h-5 w-5 md:h-6 md:w-6 text-primary/70" />
+                    <div className="rounded-lg bg-white/5 p-2.5 shadow-sm border border-white/10">
+                      <MessageCircle className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                     </div>
                     <div className="flex-1 space-y-2">
-                      <p className="rounded-2xl bg-white/80 p-3 md:p-4 text-sm md:text-base text-gray-700 font-geist shadow-sm backdrop-blur-sm">
+                      <p className="rounded-2xl bg-white/5 p-3 md:p-4 text-sm md:text-base text-gray-200 font-geist shadow-sm border border-white/10">
                         Find me the cheapest flight from New York to London next
                         month.
                       </p>
@@ -63,9 +66,9 @@ const Index = () => {
                   </div>
                   <div className="ml-16 space-y-4">
                     <div className="flex items-center space-x-2">
-                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/40" />
-                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/40" />
-                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/40" />
+                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
                     </div>
                   </div>
                 </div>
@@ -76,12 +79,12 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
+      <section className="container mx-auto px-4 py-16 md:py-24 relative">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gray-900">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
             Everything you need in <span className="italic">one place</span>
           </h2>
-          <p className="mt-4 text-base md:text-lg text-gray-600 font-geist">
+          <p className="mt-4 text-base md:text-lg text-gray-400 font-geist">
             Let our AI assistant handle your everyday tasks while you focus on what
             matters most.
           </p>
@@ -91,37 +94,35 @@ const Index = () => {
           {features.map((feature, index) => (
             <Card
               key={feature.title}
-              className="animate-fade-up border border-gray-200 p-6 transition-all duration-300 hover:border-primary/20 [animation-delay:600ms]"
+              className="animate-fade-up neo-blur p-6 transition-all duration-300 hover:bg-white/10 [animation-delay:600ms]"
             >
-              <div
-                className={`mb-4 inline-block rounded-lg bg-primary/10 p-3 text-primary`}
-              >
+              <div className="mb-4 inline-block rounded-lg bg-primary/10 p-3 text-primary border border-primary/20">
                 <feature.icon className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <h3 className="mb-2 text-lg md:text-xl font-normal">{feature.title}</h3>
-              <p className="text-sm md:text-base text-gray-600 font-geist">{feature.description}</p>
+              <h3 className="mb-2 text-lg md:text-xl font-normal text-white">{feature.title}</h3>
+              <p className="text-sm md:text-base text-gray-400 font-geist">{feature.description}</p>
             </Card>
           ))}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-50">
+      <section>
         <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-16 md:py-24 shadow-xl sm:px-24">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary" />
+          <div className="relative overflow-hidden rounded-3xl bg-primary/20 px-6 py-16 md:py-24 shadow-xl sm:px-24 border border-primary/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10" />
             <div className="relative">
               <div className="mx-auto max-w-3xl text-center">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-white">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
                   Ready to <span className="italic">simplify</span> your life?
                 </h2>
-                <p className="mt-4 text-base md:text-lg text-white/90 font-geist">
+                <p className="mt-4 text-base md:text-lg text-gray-400 font-geist">
                   Join our waitlist and be among the first to experience the future
                   of personal assistance.
                 </p>
                 <Button
                   size="lg"
-                  className="mt-8 rounded-full bg-white text-primary hover:bg-gray-100"
+                  className="mt-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20"
                 >
                   Join Waitlist
                   <ChevronRight className="ml-2 h-4 w-4" />
