@@ -237,8 +237,31 @@ const Index = () => {
       </section>
 
       {/* Footer with Company Info */}
-      <footer className="py-16 px-4 border-t border-white/10">
-        <div className="container mx-auto">
+      <footer className="relative py-16 px-4 border-t border-white/10">
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div 
+            animate={{ 
+              y: [0, -20, 0],
+              scale: [1, 1.1, 1]
+            }}
+            transition={{ 
+              duration: 20,
+              repeat: Infinity,
+              repeatType: "reverse"
+            }}
+            className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-violet-500/10 to-transparent rounded-full blur-3xl"
+          />
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(to right, rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+                             linear-gradient(to bottom, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
+            backgroundSize: '4rem 4rem',
+            opacity: 0.3
+          }} />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="space-y-4">
               <h3 className="text-white text-lg font-medium">About Paradox</h3>
