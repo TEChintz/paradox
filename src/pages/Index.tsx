@@ -263,12 +263,31 @@ const Index = () => {
 
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div className="space-y-4">
-              <h3 className="text-white text-lg font-medium">About Paradox</h3>
-              <p className="text-gray-400 text-sm">
-                Pioneering the future of AI assistance, making everyday tasks simpler and more efficient for everyone.
-              </p>
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-white text-lg font-medium">About Paradox</h3>
+                <p className="text-gray-400 text-sm">
+                  Pioneering the future of AI assistance, making everyday tasks simpler and more efficient for everyone.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <h4 className="text-white text-sm font-medium">Join Our Waitlist</h4>
+                <div className="flex gap-2">
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    className="flex-1 h-10 rounded-lg bg-white/5 border border-white/10 px-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  />
+                  <Button 
+                    size="sm"
+                    className="rounded-lg bg-primary hover:bg-primary/90"
+                  >
+                    Join
+                  </Button>
+                </div>
+              </div>
             </div>
+
             <div className="space-y-4">
               <h3 className="text-white text-lg font-medium">Quick Links</h3>
               <ul className="space-y-2">
