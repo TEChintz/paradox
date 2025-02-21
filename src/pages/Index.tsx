@@ -180,6 +180,70 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="grid gap-12 md:grid-cols-2 items-center"
+          >
+            <div className="space-y-6 text-left">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
+                Meet <span className="italic text-primary">Paradox</span>
+              </h2>
+              <p className="text-base md:text-lg text-gray-400 font-geist">
+                Paradox is more than just an AI assistant - it's your personal companion 
+                designed to understand and adapt to your unique needs. With advanced 
+                natural language processing and learning capabilities, Paradox gets 
+                better at helping you with every interaction.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <h3 className="text-lg font-normal text-white mb-2">Available 24/7</h3>
+                  <p className="text-sm text-gray-400">Always ready to assist you, day or night</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-normal text-white mb-2">Personalized</h3>
+                  <p className="text-sm text-gray-400">Learns and adapts to your preferences</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="neo-blur rounded-2xl p-8 border border-primary/20 relative z-10"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl" />
+                <div className="relative space-y-4">
+                  <MessageCircle className="text-primary w-8 h-8" />
+                  <p className="text-lg md:text-xl font-normal text-white italic">
+                    "Think of me as your digital companion, here to make your life simpler 
+                    and more efficient, one task at a time."
+                  </p>
+                  <p className="text-primary font-medium">- Paradox</p>
+                </div>
+              </motion.div>
+              <div className="absolute -top-4 -right-4 w-32 h-32 bg-primary/20 rounded-full blur-2xl" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Copyright Footer */}
+      <footer className="py-8 px-4 border-t border-white/10">
+        <div className="container mx-auto">
+          <div className="text-center text-sm text-gray-400">
+            <p>&copy; {new Date().getFullYear()} Paradox AI. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </motion.div>
   );
 };
