@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -106,7 +107,6 @@ const Index = () => {
         <div className="mx-auto mt-12 md:mt-20 max-w-5xl animate-fade-up px-4 [animation-delay:600ms]">
           <Card className="overflow-hidden border-0 shadow-2xl neo-blur">
             <div className="relative p-6 md:p-8 bg-gradient-to-br from-black/40 to-primary/5">
-              <div className="absolute inset-0 backdrop-blur-xl" />
               <div className="relative space-y-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
