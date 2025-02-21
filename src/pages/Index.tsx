@@ -148,40 +148,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="relative overflow-hidden rounded-3xl bg-primary/20 px-6 py-16 md:py-24 shadow-xl sm:px-24 border border-primary/20"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10" />
-            <div className="relative">
-              <div className="mx-auto max-w-3xl text-center">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
-                  Ready to <span className="italic">simplify</span> your life?
-                </h2>
-                <p className="mt-4 text-base md:text-lg text-gray-400 font-geist">
-                  Join our waitlist and be among the first to experience the future
-                  of personal assistance.
-                </p>
-                <Button
-                  size="lg"
-                  className="mt-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20"
-                >
-                  Join Waitlist
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Footer Section */}
+      {/* Meet Paradox Section */}
       <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
         <div className="container mx-auto">
           <motion.div
@@ -231,6 +198,39 @@ const Index = () => {
                 </div>
               </motion.div>
               <div className="absolute -top-4 -right-4 w-32 h-32 bg-primary/20 rounded-full blur-2xl" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-3xl bg-primary/20 px-6 py-16 md:py-24 shadow-xl sm:px-24 border border-primary/20"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10" />
+            <div className="relative">
+              <div className="mx-auto max-w-3xl text-center">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
+                  Ready to <span className="italic">simplify</span> your life?
+                </h2>
+                <p className="mt-4 text-base md:text-lg text-gray-400 font-geist">
+                  Join our waitlist and be among the first to experience the future
+                  of personal assistance.
+                </p>
+                <Button
+                  size="lg"
+                  className="mt-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20"
+                >
+                  Join Waitlist
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </motion.div>
         </div>
