@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -43,20 +42,20 @@ const Index = () => {
         {/* Feature Preview */}
         <div className="mx-auto mt-12 md:mt-20 max-w-5xl animate-fade-up px-4 [animation-delay:600ms]">
           <Card className="overflow-hidden border-2 shadow-lg">
-            <div className="bg-white p-4 md:p-6">
+            <div className="bg-[#F1F0FB] p-4 md:p-6">
               <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="h-2 w-2 rounded-full bg-red-500" />
-                  <div className="h-2 w-2 rounded-full bg-yellow-500" />
-                  <div className="h-2 w-2 rounded-full bg-green-500" />
+                <div className="flex items-center space-x-3">
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary/40" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary/40" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary/40" />
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="rounded-lg bg-gray-100 p-3">
-                      <MessageCircle className="h-5 w-5 md:h-6 md:w-6 text-gray-600" />
+                    <div className="rounded-lg bg-white/80 p-2.5 shadow-sm">
+                      <MessageCircle className="h-5 w-5 md:h-6 md:w-6 text-primary/70" />
                     </div>
                     <div className="flex-1 space-y-2">
-                      <p className="rounded-lg bg-gray-100 p-3 md:p-4 text-sm md:text-base text-gray-700 font-geist">
+                      <p className="rounded-2xl bg-white/80 p-3 md:p-4 text-sm md:text-base text-gray-700 font-geist shadow-sm backdrop-blur-sm">
                         Find me the cheapest flight from New York to London next
                         month.
                       </p>
@@ -64,9 +63,9 @@ const Index = () => {
                   </div>
                   <div className="ml-16 space-y-4">
                     <div className="flex items-center space-x-2">
-                      <div className="h-2 w-2 animate-pulse rounded-full bg-gray-400" />
-                      <div className="h-2 w-2 animate-pulse rounded-full bg-gray-400" />
-                      <div className="h-2 w-2 animate-pulse rounded-full bg-gray-400" />
+                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/40" />
+                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/40" />
+                      <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/40" />
                     </div>
                   </div>
                 </div>
