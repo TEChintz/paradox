@@ -104,7 +104,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
+      <section className="py-16 md:py-24 px-4">
         <div className="container mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -149,7 +149,7 @@ const Index = () => {
       </section>
 
       {/* Meet Paradox Section */}
-      <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
+      <section className="py-16 md:py-24 px-4">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -204,7 +204,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
+      <section className="py-16 md:py-24 px-4">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
