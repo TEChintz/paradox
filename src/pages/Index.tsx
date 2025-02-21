@@ -308,9 +308,9 @@ const Index = () => {
             <div className="space-y-4">
               <h3 className="text-white text-lg font-medium">Contact</h3>
               <ul className="space-y-2">
-                <li className="text-gray-400 text-sm">San Francisco, CA</li>
+                <li className="text-gray-400 text-sm">Vijayapura, KA, India</li>
                 <li className="text-gray-400 text-sm">contact@paradox.ai</li>
-                <li className="text-gray-400 text-sm">+1 (555) 123-4567</li>
+                <li className="text-gray-400 text-sm">+91 9538879369</li>
               </ul>
             </div>
           </div>
