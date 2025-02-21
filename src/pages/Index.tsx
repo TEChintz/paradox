@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -100,43 +101,6 @@ const Index = () => {
               Learn More
             </Button>
           </motion.div>
-        </div>
-
-        {/* Feature Preview */}
-        <div className="mx-auto mt-12 md:mt-20 max-w-5xl animate-fade-up px-4 [animation-delay:600ms]">
-          <Card className="overflow-hidden border-0 shadow-2xl neo-blur">
-            <div className="relative p-6 md:p-8 bg-gradient-to-br from-black/40 to-primary/5">
-              <div className="absolute inset-0 backdrop-blur-xl" />
-              <div className="relative space-y-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary/60" />
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary/30" />
-                  </div>
-                  <div className="text-xs text-white/40 font-geist">AI Assistant</div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="rounded-xl bg-primary/10 p-3 backdrop-blur-lg border border-primary/20 shadow-lg shadow-primary/10">
-                      <MessageCircle className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="rounded-2xl bg-white/5 p-4 md:p-5 text-sm md:text-base text-gray-200 font-geist shadow-lg border border-white/10 backdrop-blur-md">
-                        Find me the cheapest flight from New York to London next
-                        month.
-                      </p>
-                      <div className="mt-4 flex items-center space-x-2">
-                        <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-                        <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/60 delay-100" />
-                        <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/30 delay-200" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Card>
         </div>
       </section>
 
