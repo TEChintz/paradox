@@ -52,7 +52,7 @@ const Index = () => {
       </div>
       
       {/* Hero Section */}
-      <section className="container mx-auto px-4 min-h-[80vh] flex items-center justify-center">
+      <section className="container mx-auto px-4 pt-16 md:pt-20 pb-16 text-center lg:pt-32 relative">
         <div className="mx-auto max-w-3xl space-y-6 md:space-y-8">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
@@ -101,6 +101,42 @@ const Index = () => {
               Learn More
             </Button>
           </motion.div>
+        </div>
+
+        {/* Feature Preview */}
+        <div className="mx-auto mt-12 md:mt-20 max-w-5xl animate-fade-up px-4 [animation-delay:600ms]">
+          <Card className="overflow-hidden border-0 shadow-2xl neo-blur">
+            <div className="relative p-6 md:p-8 bg-gradient-to-br from-black/40 to-primary/5">
+              <div className="relative space-y-6">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-primary/60" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-primary/30" />
+                  </div>
+                  <div className="text-xs text-white/40 font-geist">AI Assistant</div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="rounded-xl bg-primary/10 p-3 backdrop-blur-lg border border-primary/20 shadow-lg shadow-primary/10">
+                      <MessageCircle className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="rounded-2xl bg-white/5 p-4 md:p-5 text-sm md:text-base text-gray-200 font-geist shadow-lg border border-white/10 backdrop-blur-md">
+                        Find me the cheapest flight from New York to London next
+                        month.
+                      </p>
+                      <div className="mt-4 flex items-center space-x-2">
+                        <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+                        <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/60 delay-100" />
+                        <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/30 delay-200" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
@@ -153,26 +189,27 @@ const Index = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="container mx-auto px-4 py-16 md:py-24"
       >
-        <div className="relative overflow-hidden rounded-3xl bg-primary/20 px-6 py-16 md:py-24 shadow-xl sm:px-24 border border-primary/20">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10" />
-          <div className="relative">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
-                Ready to <span className="italic">simplify</span> your life?
-              </h2>
-              <p className="mt-4 text-base md:text-lg text-gray-400 font-geist">
-                Join our waitlist and be among the first to experience the future
-                of personal assistance.
-              </p>
-              <Button
-                size="lg"
-                className="mt-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20"
-              >
-                Join Waitlist
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="relative overflow-hidden rounded-3xl bg-primary/20 px-6 py-16 md:py-24 shadow-xl sm:px-24 border border-primary/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10" />
+            <div className="relative">
+              <div className="mx-auto max-w-3xl text-center">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
+                  Ready to <span className="italic">simplify</span> your life?
+                </h2>
+                <p className="mt-4 text-base md:text-lg text-gray-400 font-geist">
+                  Join our waitlist and be among the first to experience the future
+                  of personal assistance.
+                </p>
+                <Button
+                  size="lg"
+                  className="mt-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20"
+                >
+                  Join Waitlist
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
