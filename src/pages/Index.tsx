@@ -52,8 +52,8 @@ const Index = () => {
       </div>
       
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-16 md:pt-20 pb-16 text-center lg:pt-32 relative">
-        <div className="mx-auto max-w-3xl space-y-6 md:space-y-8">
+      <section className="h-screen flex items-center justify-center px-4">
+        <div className="mx-auto max-w-3xl space-y-6 md:space-y-8 text-center">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,57 +105,60 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24 relative">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-3xl text-center"
-        >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
-            Everything you need in <span className="italic">one place</span>
-          </h2>
-          <p className="mt-4 text-base md:text-lg text-gray-400 font-geist">
-            Let our AI assistant handle your everyday tasks while you focus on what
-            matters most.
-          </p>
-        </motion.div>
+      <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
+        <div className="container mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight text-gradient">
+              Everything you need in <span className="italic">one place</span>
+            </h2>
+            <p className="mt-4 text-base md:text-lg text-gray-400 font-geist">
+              Let our AI assistant handle your everyday tasks while you focus on what
+              matters most.
+            </p>
+          </motion.div>
 
-        <div className="mt-12 md:mt-20 grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <Card className="neo-blur p-6 transition-all duration-300 hover:bg-white/10 shimmer-effect group">
-                <motion.div 
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  className="mb-4 inline-block rounded-lg bg-primary/10 p-3 text-primary border border-primary/20 group-hover:bg-primary/20"
-                >
-                  <feature.icon className="h-5 w-5 md:h-6 md:w-6" />
-                </motion.div>
-                <h3 className="mb-2 text-lg md:text-xl font-normal text-white">{feature.title}</h3>
-                <p className="text-sm md:text-base text-gray-400 font-geist">{feature.description}</p>
-              </Card>
-            </motion.div>
-          ))}
+          <div className="mt-12 md:mt-20 grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="neo-blur p-6 transition-all duration-300 hover:bg-white/10 shimmer-effect group">
+                  <motion.div 
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    className="mb-4 inline-block rounded-lg bg-primary/10 p-3 text-primary border border-primary/20 group-hover:bg-primary/20"
+                  >
+                    <feature.icon className="h-5 w-5 md:h-6 md:w-6" />
+                  </motion.div>
+                  <h3 className="mb-2 text-lg md:text-xl font-normal text-white">{feature.title}</h3>
+                  <p className="text-sm md:text-base text-gray-400 font-geist">{feature.description}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="relative overflow-hidden rounded-3xl bg-primary/20 px-6 py-16 md:py-24 shadow-xl sm:px-24 border border-primary/20">
+      <section className="min-h-screen flex items-center py-16 md:py-24 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-3xl bg-primary/20 px-6 py-16 md:py-24 shadow-xl sm:px-24 border border-primary/20"
+          >
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10" />
             <div className="relative">
               <div className="mx-auto max-w-3xl text-center">
@@ -175,9 +178,9 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </motion.section>
+      </section>
     </motion.div>
   );
 };
